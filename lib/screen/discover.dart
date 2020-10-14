@@ -70,14 +70,18 @@ class _DiscoverState extends State<Discover> {
   }
 
   Widget getCard(item) {
+    var id = item['id'];
     var namaFilm = item['title'];
+    var sinopsis = item['overview'];
+    var score = item['vote_average'];
     var release = item['release_date'];
     var poster = "https://image.tmdb.org/t/p/w500/" + item['poster_path'];
+    var backPoster =  "https://image.tmdb.org/t/p/w500/" + item ['backdrop_path'];
     return Card(
         margin: const EdgeInsets.all(10),
         child: InkWell(
           onTap: () => Navigator.push(context,
-              MaterialPageRoute(builder: (context) => DiscoverDetail())),
+              MaterialPageRoute(builder: (context) => DiscoverDetail(id : id, namaFilm : namaFilm, sinopsis : sinopsis, score : score, release : release, poster : poster, backPoster : backPoster))),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
             child: ListTile(
@@ -117,7 +121,7 @@ class _DiscoverState extends State<Discover> {
                       Container(
                         width: 245,
                         child: Text(
-                          "Milea adalah pacarnya dilan yang ketemu di kantin yang di comblangin oleh temennya sendiri",
+                          sinopsis.toString(),
                           textAlign: TextAlign.justify,
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,
