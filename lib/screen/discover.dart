@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-import 'package:movie_catalog/model/discovermodel.dart';
 import 'package:movie_catalog/screen/discoverDetail.dart';
 
 class Discover extends StatefulWidget {

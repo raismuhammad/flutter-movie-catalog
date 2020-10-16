@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:movie_catalog/screen/discover.dart';
 import 'package:movie_catalog/screen/trending.dart';
+import 'package:movie_catalog/screen/favorite.dart';
 
 class Nav extends StatefulWidget {
   @override
@@ -12,7 +13,7 @@ class _NavState extends State<Nav> {
   List<Widget> _widgetOptions = <Widget>[
     Discover(),
     Trending(),
-    Text("Popular"),
+    Favorite(),
   ];
 
   void _onItemTap(int index) {
@@ -28,16 +29,16 @@ class _NavState extends State<Nav> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.apps),
             title: Text("DISCOVER"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.trending_up),
             title: Text("TRENDING"),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            title: Text("POPULAR"),
+            icon: Icon(Icons.star),
+            title: Text("FAVORITE"),
           ),
         ],
         currentIndex: _selectedIndex,

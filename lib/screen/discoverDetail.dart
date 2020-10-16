@@ -18,7 +18,7 @@ class DiscoverDetail extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          title: Text("DETAIL"),
+          title: Text(namaFilm.toString(), style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700)),
         ),
         body: SingleChildScrollView(
           child: Column(
