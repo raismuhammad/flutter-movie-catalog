@@ -1,6 +1,6 @@
 # movie_catalog
 
-A new Flutter project.
+A new Flutter project. Using Flutter version 1
 
 ## Getting Started
 
